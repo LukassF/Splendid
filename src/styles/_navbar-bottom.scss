@@ -1,0 +1,50 @@
+@mixin flex($direction,$align,$justify){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+#nav-bottom{
+    backdrop-filter: blur(15px);
+    background-color: rgba(3, 3, 3, 0.7);
+    width:100vw;
+    @include flex(row,center,center);
+    height:80px;
+    position: fixed;
+    bottom:0px;
+    z-index: 9;
+    box-shadow: none;
+    padding:10px 20px;
+    visibility: hidden;
+
+    a{
+        color:white;
+        text-decoration: none;
+        padding:15px 0px;
+        flex:1;
+        @include flex(column,center,center);
+        gap:5px;
+        cursor:pointer;
+        border-radius: 20px 0px;
+
+        i{
+            font-size: 1.6em;
+
+        }
+        &:hover{
+            background-color: rgba(133, 133, 133,0.2);
+        }
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    #nav-bottom{
+        visibility: visible;
+    }
+}
+@media only screen and (max-width: 450px){
+    a{
+        color:white;
+    }
+}

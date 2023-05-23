@@ -1,0 +1,139 @@
+{
+    "users":[
+        {
+            "username":"Visions",
+            "image": "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40087/thar-exterior-front-view.jpeg?q=75",
+            "backgroundImage": "https://preview.redd.it/my-first-ever-vector-landscape-inspired-by-u-dataxiii-v0-1x0javmx8an91.png?width=640&crop=smart&auto=webp&s=ec9e02fd014ffd8c0e0d0b368586f105ca34e546",
+            "role": "Content creator",
+            "email": "visions.uk@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"VashRaw",
+            "image": "https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928__480.jpg",
+            "backgroundImage": "https://i.pinimg.com/originals/74/25/86/7425868ac741fbba296bb12b8c119b2c.jpg",
+            "role": "Sponsor",
+            "email": "vashyrawe@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Twilight_elite",
+            "image": "https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=",
+            "backgroundImage": "https://cdnb.artstation.com/p/assets/images/images/025/795/625/large/tien-phat-night-landscape.jpg?1586950703",
+            "role": "Content creator",
+            "email": "twilightelite@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"salfaar",
+            "image": "https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=",
+            "backgroundImage": "https://static.vecteezy.com/system/resources/thumbnails/002/099/721/small_2x/mountain-beautiful-landscape-background-design-illustration-free-vector.jpg",
+            "role": "Content creator",
+            "email": "sulfurrather@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Askinf",
+            "image": "https://images.panda.org/assets/images/pages/welcome/orangutan_1600x1000_279157.jpg",
+            "backgroundImage": "https://www.vectornator.io/blog/content/images/2022/05/611ab4846fca351648d90674_Cover-Vector-Art.png",
+            "role": "Content creator",
+            "email": "askifnot.cc@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Doodlery",
+            "image": "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2020/09/Frame-47.png",
+            "backgroundImage": "https://cdn.pixabay.com/photo/2018/04/06/13/46/poly-3295856__340.png",
+            "role": "Sponsor",
+            "email": "foolerydo@splendid.com",
+            "state": "request"
+
+        },
+         {
+            "username":"Minexsys",
+            "image": "https://cdn.theatlantic.com/media/img/photo/2018/10/images-of-the-season-fall-is-in-the/f02_RTX6EJJJ-1/original.jpg",
+            "backgroundImage": "https://img.freepik.com/free-photo/grunge-paint-background_1409-1337.jpg",
+            "role": "Content creator",
+            "email": "mineksysk@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Playmo221",
+            "image": "https://media.istockphoto.com/id/636379014/photo/hands-forming-a-heart-shape-with-sunset-silhouette.jpg?s=612x612&w=0&k=20&c=CgjWWGEasjgwia2VT7ufXa10azba2HXmUDe96wZG8F0=",
+            "backgroundImage": "https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg",
+            "role": "Content creator",
+            "email": "plymoth@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Realth",
+            "image": "https://images.ctfassets.net/hrltx12pl8hq/qGOnNvgfJIe2MytFdIcTQ/429dd7e2cb176f93bf9b21a8f89edc77/Images.jpg",
+            "backgroundImage": "https://static-cse.canva.com/blob/572626/1.magebyRodionKutsaevviaUnsplash.jpg",
+            "role": "Content creator",
+            "email": "virealth@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Romand",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYcqAvyfFkwW-_IQPxTKYX6X3rI2Pm2VTnjD7b6ZHTHYB1fzUVnHOg582G2VKGsL9EXs0&usqp=CAU",
+            "backgroundImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLwBihonPCMJzIepb2_MuB8fPb2D4AG7NTpQ&usqp=CAU",
+            "role": "Sponsor",
+            "email": "roman20@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Quedista",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoVJ22ilfQm5jDaa3icKmhVpWyzJklSVFbDw&usqp=CAU",
+            "backgroundImage": "https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569__480.jpg",
+            "role": "Content creator",
+            "email": "querelty66@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Tavares",
+            "image": "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+            "backgroundImage": "https://static-cse.canva.com/blob/572026/removingbackgroundimages_Unsplash.jpeg",
+            "role": "Content creator",
+            "email": "tvares@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Florksey",
+            "image": "https://imgd-ct.aeplcdn.com/1056x660/n/cw/ec/40087/thar-exterior-left-rear-three-quarter.jpeg?q=75",
+            "backgroundImage": "https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2017/02/Photoshop-Replace-Background-Featured.jpg",
+            "role": "Sponsor",
+            "email": "lukas2003@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Dataphi4",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy1uZTBlxjOfVEiZsIt9FSo_bkxgEb6_OslQ&usqp=CAU",
+            "backgroundImage": "https://t4.ftcdn.net/jpg/04/96/33/01/360_F_496330168_jY24w6K92HMjDbsNbon2QvEYtML8qdWm.jpg",
+            "role": "Sponsor",
+            "email": "whatever.yi@splendid.com",
+            "state": "request"
+
+        },
+        {
+            "username":"Yanickc",
+            "image": "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
+            "backgroundImage": "https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
+            "role": "Content creator",
+            "email": "yanny66@splendid.com",
+            "state": "request"
+
+        }
+    ]
+}

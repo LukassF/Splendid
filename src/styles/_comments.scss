@@ -1,0 +1,171 @@
+@mixin flex($direction,$align,$justify){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+#comment-section{
+    padding-top: 20px;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    height:95%;
+    width:95%;
+    border: solid black 2px;
+    border-bottom: none;
+    background-color: white;
+    z-index: 20;
+    bottom:-50px;
+    right:0;
+    border-top-right-radius: 30px 30px;
+    border-top-left-radius: 30px 30px;
+    @include flex(column,center,center);
+    gap:15px;
+    .comment-section-header{
+        width:100%;
+        position: relative;
+        display: grid;
+        place-content: center;
+        i{
+            cursor: pointer;
+            position: absolute;
+            right:20px;
+            font-size: 1.2em;
+        }
+    }
+    .comment-section-content{
+        padding-top: 10px;
+        width:90%;
+        height:80%;
+        font-size: 1.3em;
+        padding-left: 30px;
+        @include flex(column,start,start);
+        gap:50px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .individual-comment{
+            width:70%;
+            height:auto;
+            display: grid;
+            grid-template-columns: 10% 83% 7%;
+            grid-template-rows: 10% 90%;
+            grid-column-gap: 20px;
+            grid-template-areas: 
+            'image name heart'
+            'image comment heart'
+            ;
+            @media only screen and (max-width:650px){
+                grid-column-gap: 30px;
+            }
+            div:nth-child(1){
+                grid-area: image;
+                border-radius: 50%;
+                height:50px;
+                width:50px;
+                background-size: auto 100%;
+                background-repeat: no-repeat;
+            }
+            div:nth-child(2){
+                grid-area: name;
+
+                @media only screen and (max-width:650px){
+                    color:rgb(255, 255, 255);
+                }
+            }
+            div:nth-child(3){
+                font-size: 0.8em;
+                color:rgba(63, 62, 62,0.8);
+                width:100%;
+                height:auto;
+                word-wrap: break-word;
+
+                @media only screen and (max-width:650px){
+                    color:rgb(180, 164, 164);
+                }
+            }
+            i{
+                cursor: pointer;
+                margin-left: 150px;
+                grid-area: heart;
+                @include flex(row,center,center);
+                gap:10px;
+
+                span{
+                    font-size: 0.6em;
+                }
+                @media only screen and (max-width:750px){
+                    transform: translateX(-130px);
+                }
+            }
+
+        }
+    }
+    #comment-input{
+        padding-bottom: 20px;
+
+        @media only screen and (max-width:650px){
+            transform: scale(0.8);
+        }
+        input[type=text]{
+            width:400px;
+            height:50px;
+            border-radius: 10px;
+            border:solid black 1px;
+            text-indent: 15px;
+            font-size: 1.1em;
+            outline: none;
+            padding-right: 15px;
+
+            @media only screen and (max-width:650px){
+                background-color: rgb(70, 68, 68);
+                color:rgb(255, 255, 255);
+            }
+        }
+        button{
+            height:50px;
+            width:50px;
+            border-top-right-radius: 10px 10px;
+            border-bottom-right-radius: 10px 10px;
+            border: solid black 1px;
+            transform: translate(-11px,0px);
+            cursor: pointer;
+            font-size: 1.2em;
+            background-color: rgb(233, 233, 233);
+
+            @media only screen and (max-width:650px){
+                visibility: hidden;
+            }
+            &:hover{
+                background:linear-gradient(to right,blue,lightblue);
+                color:white;
+            }
+        }
+    }
+}
+
+.view-comments-enter{
+    opacity:0;
+}
+.view-comments-enter-active{
+    opacity:1;
+    transition: all 0.3s;
+    
+}
+.view-comments-exit{
+    opacity:1;
+
+}
+.view-comments-exit-active{
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 650px){
+    #comment-section{
+        transform: translateX(-52%) scale(1.1);
+        background-color: black;
+        color:white;
+        border-color: white;
+    }
+}

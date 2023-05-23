@@ -1,0 +1,369 @@
+
+@mixin flex($direction,$align,$justify){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+section#following{
+    width:100%;
+
+    #followers-nav{
+        position: absolute;
+        width:100%;
+        top:60px;
+        height:50px;
+        z-index: 4;
+        @include flex(row,center,center);
+        gap:0px;
+
+        @media only screen and (max-width:650px){
+            top:105px;
+        }
+
+        button{
+            flex: 1;
+            height:120%;
+            background-color: transparent;
+            position: relative;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: all 0.4s;
+            @include flex(row,center,center);
+
+            &::after{
+                content: '';
+                position: absolute;
+                width:100%;
+                background-color: black;
+                height:2px;
+                bottom:0px;
+                left:0;
+                transform: scaleX(0);
+                transition: all 0.3s;
+                transform-origin: left;
+
+                @media only screen and (max-width:650px){
+                   background-color: white;
+                }
+            }
+
+            &:nth-child(2){
+                &::after{
+                    transform-origin: right;
+                }
+            }
+
+            @media only screen and (max-width:650px){
+                color:white;
+                border-color: white;
+            }
+
+
+            div{
+                color:rgb(56, 56, 56);
+                position: absolute;
+                right:30px;
+
+                @media only screen and (max-width:650px){
+                    visibility: hidden;
+                }
+            }
+
+            &:hover{
+                &::after{
+                    transform: scaleX(1);
+
+                }
+            }
+
+            
+        }
+        .followersActive{
+            flex: 2;
+            background-color: rgba(19, 196, 137, 0.1);
+        }
+    }
+
+    #requests{
+        padding-top: 70px;
+        width:100%;
+        height:auto;
+        @include flex(row,center ,center);
+        flex-wrap: wrap;
+        gap:20px;
+        position: relative;
+
+        
+        @media only screen and (max-width: 1080px){
+                @include flex(row,center,center);    
+        } 
+        @media only screen and (max-width:650px){
+            padding-top: 150px;
+        }
+    }
+    .follower-card{
+        flex-shrink: 0;
+        cursor: pointer;
+        width:300px;
+        height:400px;
+        border-radius: 15px;
+        padding: 0px;
+        position: relative;
+        perspective: 1000px;
+        background-color: transparent;
+        
+        &:hover, &:focus{
+            .follower-card-content{
+                transform: rotateY(180deg);
+                box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            .front{
+                transition: opacity 0.3s;
+                opacity: 0;
+            }
+            .back{
+                transition: opacity 0.3s;
+                transition-delay: 0.2s;
+                opacity:1;
+            }
+        }
+
+        &:not(:hover, :focus){
+            .front{
+                transition: opacity 0.3s;
+                transition-delay: 0.2s;
+                opacity: 1;
+            }
+            .back{
+                transition: opacity 0.3s;
+                opacity: 0;
+            }
+        }
+
+        .follower-card-content{
+            overflow: hidden;
+            border-radius: inherit;
+            position: relative;
+            width: 100%;
+            height:100%;
+            transition: transform 0.6s, box-shadow 0.3s;
+            transform-style: preserve-3d;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+     
+             @media only screen and (max-width: 650px){
+                box-shadow: 4px 4px 10px rgba(148, 143, 143, 0.2);
+                .front{
+                    box-shadow: inset 4px 4px 10px rgba(141, 137, 137, 0.2);
+                    
+                }
+               }
+               
+        .front{
+            box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: inherit;
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            width:93%;
+            height:95%;
+            @include flex(column,center,center);
+            gap:20px;
+            z-index: 2;
+            background-color: rgba(9, 110, 76,0.05);
+            
+            @media only screen and (max-width: 650px){
+            color:white;
+            }
+            
+
+            .follower-image{
+                width:70%;
+                border-radius: 50%;
+                overflow: hidden;
+                // border:solid white 10px;
+                aspect-ratio: 1/1;
+            }
+
+            .follower-name{
+                font-size: 2em;
+            }
+            span:nth-child(3){
+                color:grey;
+                margin-top: -20px;
+            }
+        }
+
+        .back{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            @include flex(column,center,flex-start);
+            gap:0px;
+            transform: rotateY(180deg);
+            &::after{
+                z-index: -1;
+                position: absolute;
+                content: '';
+                top:39%;
+                left:0;
+                width:150%;
+                height:3px;
+                background-color: black;
+                border-radius: 20px;
+
+                @media only screen and (max-width: 650px){
+                    background-color:white;
+                   }
+            }
+
+            .follower-background-image{
+                width:100%;
+                height:30%;
+                overflow: hidden;
+            }
+            .follower-profile-image-back{
+                width:35%;
+                aspect-ratio: 1/1;
+                border-radius: 50%;
+                overflow: hidden;
+                position: absolute;
+                transform: translate(0%,27%);    
+                border: solid white 5px; 
+                
+            }
+            h4{
+                font-size: 1.2em;
+                background-color: white;
+                padding: 0px 10px;
+                z-index: 2;
+                @media only screen and (max-width: 650px){
+                    color:white;
+                    background-color: black;
+                   }
+
+            }
+            ul{
+                background-color: transparent;
+                list-style: none;
+                padding-left: 0px;
+                height:32%;
+                margin-top: 0px;
+                width:80%;
+                @include flex(column, flex-start , space-evenly );
+
+                li{
+                    width:100%;
+                    @include flex(row,center,flex-start);
+                    gap:10px;
+                    color:rgb(116, 113, 113);
+                }
+
+                span{
+                    margin-top: 20px;
+                    width:100%;
+                    @include flex(row,center,space-around);
+
+                    button{
+
+                        width:auto;
+                        padding: 5px 10px;
+                        height:30px;
+                        font-size: 0.7em;
+                        border: none;
+                        border-radius: 10px;
+                        background-color: transparent;
+                        cursor: pointer;
+                        transition: all 0.3s;
+                        @media only screen and (max-width: 650px){
+                            color:rgb(161, 156, 156);
+                           }
+ 
+                    }
+                    #first{
+                        border:solid rgba(36, 163, 121,0.5) 2px;
+
+                        &:hover{
+                            background-color:rgba(36, 163, 121,0.5) ;
+                            color:white;
+                            box-shadow: 0px 0px 10px rgba(36, 163, 121,0.5);
+                        }
+                    }
+                    #second{
+                        border:solid rgba(230, 59, 59,0.5) 2px;
+
+                        &:hover{
+                            background-color:rgba(230, 59, 59,0.5) ;
+                            color:white;
+                            box-shadow: 0px 0px 10px rgba(230, 59, 59,0.5);
+                        }
+                    }
+                }
+
+            }
+            .follower-stats{
+                background-color: rgba(204, 199, 199,0.3);
+                padding: 10px 0px 20px 0px;
+                width:100%;
+                height:auto;
+                @include flex(row,center,space-evenly);
+
+                div{
+
+                    @include flex(column,center,center);
+                }
+            }
+        }
+        }
+       
+    }
+
+    #no-followers{
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+        width: 90%;
+        height:100vh;
+        @include flex(column,center,flex-start);
+        gap:20px;
+
+        div{
+            font-size: 2.7em;
+
+            &:nth-child(2){
+                @media only screen and (max-width: 650px){
+                    color:rgb(255, 255, 255);
+                    font-size: 2em;
+                   }
+            }
+
+            &:nth-child(3){
+                font-size: 2em;
+                color:rgb(104, 101, 101);
+
+                @media only screen and (max-width: 650px){
+                    font-size: 1.1em;
+                   }
+            }
+        }
+    }
+
+    #accepted{
+        width:100%;
+        min-height:100vh;
+        height:auto;
+        @include flex(row,flex-start ,center);
+        flex-wrap: wrap;
+        gap:20px;
+        position: relative;
+
+        
+        @media only screen and (max-width: 1080px){
+                @include flex(row,center,center);    
+        } 
+    }
+}

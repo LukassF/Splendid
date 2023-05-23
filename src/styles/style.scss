@@ -1,0 +1,99 @@
+@import './navbar';
+@import './main_left';
+@import './video';
+@import './navbar-bottom';
+@import './comments';
+@import './login';
+@import './profile';
+@import './profile_video';
+@import './following';
+
+@font-face {
+    font-family:Roboto ;
+    src: url('./RobotoCondensed-Regular.ttf');
+}
+@font-face {
+    font-family:RobotoBold ;
+    src: url('./RobotoCondensed-Bold.ttf');
+}
+*{
+    box-sizing: border-box;
+}
+html,body{
+    height:auto;
+    width:100%;
+    margin:0;
+    font-family: Roboto;
+    overflow-x: hidden;
+
+}
+
+#welcome-page{
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    background-color: white;
+    z-index: 40;
+    display:grid;
+    place-content: center;
+
+    span:nth-child(1){
+        font-family: RobotoBold;
+        font-size: 10em;
+        background-image: repeating-linear-gradient(to right,rgb(2, 112, 2),rgb(3, 117, 41),rgb(3, 146, 86), rgb(2, 58, 39),rgb(2, 58, 39),rgb(3, 146, 86),rgb(2, 112, 2));
+        background-size: 100%;
+        color: #fff;
+        color:transparent;
+        background-clip: text;
+        animation: slide 6s infinite;
+        @media only screen and (max-width:700px){
+            font-size: 4em;
+        }
+    }
+    span:nth-child(2){
+        margin-top: 50px;
+        font-size: 4em;
+        color:rgb(87, 87, 87);
+        text-align: center;
+
+        @media only screen and (max-width:700px){
+            font-size: 1.5em;
+        }
+    }
+}
+hr{
+    color: rgba(131, 131, 131,0.2);
+}
+
+#logo-absolute{
+    visibility: hidden;
+    font-family: RobotoBold;
+    background-color: black;
+    position: fixed;
+    top:0px;
+    width:100vw;
+    @include flex(row,center,flex-start);
+    gap:20px;
+    font-size: 1.7em;
+    color:white;
+    z-index: 10;
+    border-bottom: solid rgb(41, 40, 40) 1px;
+    padding: 15px 20px;
+
+    text-shadow:
+    0 0 7px #fff,
+    0 0 10px #05ffde,
+    0 0 21px rgb(0, 238, 255),
+    0 0 42px rgb(4, 128, 201),;
+
+    @media only screen and (max-width: 650px){
+        visibility: visible;
+    }
+}
+
+
+@media only screen and (max-width: 650px){
+    body{
+       background-color: black;    
+    }
+} 
