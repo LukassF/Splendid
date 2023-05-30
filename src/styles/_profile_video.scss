@@ -6,39 +6,51 @@
 }
 
 #video-creator-section{
-    height:100vh;
-    width: 100%;
+    height:100%;
+    min-width: 90%;
     display:grid;
+    padding-bottom: 20px;
     grid-template-columns: 2fr 3fr;
     grid-column-gap: 0px;
     z-index:0;
+
+    @media screen and (max-width:650px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        // width:90vw;
+    }
+    @media screen and (max-width:500px) {
+        transform: scale(0.8);
+        // width:90vw;
+    }
 
     #close-upload{
         width:40px;
         aspect-ratio: 1/1;
         position: absolute;
         top:50px;
-        right:8%;
+        right:7%;
         font-size: 1.7em;
         background: transparent;
         border:none;
         cursor: pointer;
         color:grey;
+        z-index: 10;
 
         &:hover{
-            color:black;
+            color:rgb(185, 181, 181);
         }
 
         @media only screen and (max-width:650px){
             color:black;
             &:hover{
-                color:rgb(99, 96, 96);
+                color:rgb(179, 170, 170);
             }
         }
     }
 
     #creator{
-        width:80%;
+        width:100%;
         height:90%;
         background-color: rgba(5, 77, 71,0.6);
         border-radius: 20px 0px 0px 20px;
@@ -52,6 +64,10 @@
         box-shadow: 20px 0px 10px -5px rgb(156, 153, 153);
         @media only screen and (max-width:650px){
            box-shadow: none;
+           height:50%;
+           height: auto;
+           border-radius: 20px 20px 0px 0px;
+           border-color: rgb(129, 129, 129);
         }
 
         textarea{
@@ -64,70 +80,91 @@
             outline: none;
             border-radius: 19px 0px 0px 0px;
             top:-5px;
+            @media screen and (max-width:650px) {
+                top:0px;
+                border-radius: 19px 19px 0px 0px;
+                background-color: rgb(54, 53, 53);
+                color:white;
+            }
         }
-        span{
-            @include flex(row,center,flex-start);
+        #video-options-buttons{
+            @include flex(column,flex-start,flex-start);
             width:100%;
-            padding:5px 15px;
-            color:white;
-            border-radius: 10px;
-            gap:20px;
-            cursor: pointer;
-
-            p{
-                font-size: 1.3em;
-            }
-            i{
-                margin-left: auto;
-                margin-right: 20px;
-                font-size: 1.2em;
-            }
-
-            &:hover{
-                background-color: rgba(211, 211, 224,0.3);
-            }
-            &.toggled button{
-                background-color: rgba(43, 213, 255, 0.7);
-                box-shadow: 2px 2px 7px rgb(78, 78, 78);
-            }
-            &.toggled button::before{
-                background-color: white;
-                transform: translateX(50px);
-                
-                @media only screen and (max-width:600px){
-                    transform: translateX(35px);
-                 }
-                 @media only screen and (max-width:550px){
-                    transform: translateX(25px);
-                 }
-                 @media only screen and (max-width:500px){
-                    transform: translateX(15px);
-                 }
-            }
-
-            button{
+            @media only screen and (max-width:650px){
+                @include flex(row,flex-start,flex-start);
+             }
+            span{
+                @include flex(row,center,flex-start);
+                width:100%;
+                padding:5px 15px;
+                color:white;
+                border-radius: 10px;
+                gap:20px;
                 cursor: pointer;
-                transition: all 0.3s;
-                width:90px;
-                height:40px;
-                border-radius: 500px;
-                border: none;
-                background-color: rgba(110, 106, 106, 0.6);
-                position: relative;
-
-                &::before{
-                    transition: background-color 0.1s, transform 0.3s;
-                    content:'';
-                    position: absolute;
-                    width:35px;
-                    aspect-ratio: 1/1;
-                    left:2.5px;
-                    top:2.5px;
-                    background-color: rgba(59, 59, 61,0.6);
-                    border-radius: 50%;
+                @media only screen and (max-width:650px){
+                    @include flex(column,center,center);
+                    transform: scale(0.8);
+                 }
+    
+                p{
+                    font-size: 1.3em;
+                }
+                i{
+                    margin-left: auto;
+                    margin-right: 20px;
+                    font-size: 1.2em;
+                    @media only screen and (max-width:650px){
+                       margin:0 ;
+                     }
+                }
+    
+                &:hover{
+                    background-color: rgba(211, 211, 224,0.3);
+                }
+                &.toggled button{
+                    background-color: rgba(43, 213, 255, 0.7);
+                    box-shadow: 2px 2px 7px rgb(78, 78, 78);
+                }
+                &.toggled button::before{
+                    background-color: white;
+                    transform: translateX(50px);
+                    
+                    // @media only screen and (max-width:600px){
+                    //     transform: translateX(35px);
+                    //  }
+                    //  @media only screen and (max-width:550px){
+                    //     transform: translateX(25px);
+                    //  }
+                    //  @media only screen and (max-width:500px){
+                    //     transform: translateX(15px);
+                    //  }
+                }
+    
+                button{
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    width:90px;
+                    height:40px;
+                    border-radius: 500px;
+                    border: none;
+                    background-color: rgba(110, 106, 106, 0.6);
+                    position: relative;
+    
+                    &::before{
+                        transition: background-color 0.1s, transform 0.3s;
+                        content:'';
+                        position: absolute;
+                        width:35px;
+                        aspect-ratio: 1/1;
+                        left:2.5px;
+                        top:2.5px;
+                        background-color: rgba(59, 59, 61,0.6);
+                        border-radius: 50%;
+                    }
                 }
             }
         }
+        
         button#finish-upload{
             transition: all 0.3s;
             width:70%;
@@ -140,6 +177,9 @@
             border: solid white 4px;
             background: transparent;
             cursor: pointer;
+            @media only screen and (max-width:650px){
+                margin-top:-10px ;
+              }
 
             &:hover{
                 background-color: rgb(255, 255, 255);
@@ -152,7 +192,7 @@
         padding-bottom: 50px;
         padding-top: 50px;
         @include flex(column,center,center);
-        width:90%;
+        width:100%;
         height:90%;
         background-color: rgba(185, 192, 192,0.5);
         align-self: center;
@@ -162,6 +202,11 @@
         border-left:none;
         @media only screen and (max-width:650px){
             background-color: rgba(66, 66, 66, 0.5);
+            border-radius: 0px 0px 20px 20px;
+            border: solid white 4px;
+            border-color: rgb(129, 129, 129);
+            border-top: none;
+            margin-top: -90px;
          }
 
         .caption{

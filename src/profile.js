@@ -19,8 +19,6 @@ export default function Profile(){
     const profileImage = useRef('')
     const listRef = useRef('')
     const changeRef = useRef(null)
-    const videoBlackBackground = useRef([])
-    const videoContainerRef = useRef([])
     const [renderProfileImage2,setRenderProfileImage2] = useState(false)
     const [nameChangeInput,setNameChangeInput] = useState(false)
     const [username,setUsername] = useState(window.localStorage.getItem('currentUsername'))
@@ -131,26 +129,13 @@ export default function Profile(){
                 profileImage.current.style.boxShadow = 'none'
                 listRef.current.style.width = "90%"
 
-                if(window.innerWidth < 650 && videoBlackBackground.current[0]){
-                    videoBlackBackground.current.forEach(item => {
-                        if(item) item.style.width = '100%'
-                    })
-                    videoContainerRef.current.forEach(item => {
-                        if(item) item.style.width = '110vw'
-                    })
+                if(window.innerWidth < 650){
                     if(changeRef.current){
                         changeRef.current.style.width = '100vw'
                         changeRef.current.style.height = 'auto'
                         changeRef.current.style.minHeight = '400px'
                     }
                 }else{
-                    videoBlackBackground.current.forEach(item => {
-                        if(item)
-                        item.style.width = '500px'
-                    })
-                    videoContainerRef.current.forEach(item => {
-                        if(item) item.style.width = '100%'
-                    })
                     if(changeRef.current){
                         changeRef.current.style.width = '800px'
                         changeRef.current.style.height = '400px'
@@ -271,8 +256,6 @@ export default function Profile(){
                                 return(
                                     <div className="my-videos-container">
                                         <Video 
-                                            reference1={el => videoBlackBackground.current.push(el)}
-                                            reference2={el => videoContainerRef.current.push(el)}
                                             source={item.source}
                                             username={item.user.username}
                                             image={item.user.image}

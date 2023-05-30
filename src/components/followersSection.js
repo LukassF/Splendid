@@ -14,7 +14,7 @@ export default function FollowersSection(props){
             <Requests requestsSection={requestsSection} followers={props.followers} setFollowers={props.setFollowers}/>
             
             {(!requestsSection && JSON.parse(followersStorage).filter(item => item.state === 'accepted').length === 0) && <article id="no-followers">
-                <img src="https://i.pinimg.com/originals/13/ac/7a/13ac7a0d3470b516acf8a2d93096a6ae.jpg" width="90%"></img>
+                <img src="https://images.vexels.com/media/users/3/215471/isolated/preview/c949e9400d0724b68a17c8facaa193af-chill-laying-man-flat.png" width="60%"></img>
                 <div>No followers yet...</div>
                 <div>Accept follow requests or find new friends yourself!</div>
             </article>}

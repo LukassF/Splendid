@@ -10,9 +10,6 @@ export default function MainRight(props){
     let videoArray = JSON.parse(window.localStorage.getItem('videoArray'))
     let followersStorage = window.localStorage.getItem('followers')
     
-    const videoBlackBackground = useRef([])
-    const videoContainerRef = useRef([])
-    
     const [followers,setFollowers] = useState([])
     const [length,setLength] = useState({})
 
@@ -21,7 +18,6 @@ export default function MainRight(props){
     
     useEffect(() => {
         if(followersStorage) setFollowers(JSON.parse(followersStorage))
-        onResizing1()
     },[])
 
     useEffect(() => {
@@ -32,25 +28,6 @@ export default function MainRight(props){
         })
     },[followers])
 
-    var onResizing1 = () => {
-        if(window.innerWidth < 650 && videoBlackBackground.current[0]!==null){
-            videoBlackBackground.current.forEach(item => {
-                if(item) item.style.width = '100%'
-            })
-            videoContainerRef.current.forEach(item => {
-                if(item) item.style.width = '110vw'
-            })
-        }else{
-            videoBlackBackground.current.forEach(item => {
-                if(item) item.style.width = '500px'
-            })
-            videoContainerRef.current.forEach(item => {
-                if(item) item.style.width = '100%'
-            })
-        }
-    }
-        
-    window.onresize = onResizing1
 
 //--------------------------------------------------------------------------------------------------------------------
 
@@ -60,8 +37,6 @@ export default function MainRight(props){
                 if(item.user.username.includes(props.browser))
                     return(
                         <Video 
-                            reference1={el => videoBlackBackground.current.push(el)}
-                            reference2={el => videoContainerRef.current.push(el)}
                             source={item.source} 
                             username={item.user.username} 
                             image={item.user.image} 

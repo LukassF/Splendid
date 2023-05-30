@@ -75,14 +75,14 @@ export default function Video(props){
     }
 
     return(
-        <div className='video-container' onClick={event => closeComments(event)} ref={props.reference2}>
+        <div className='video-container' onClick={event => closeComments(event)}>
             <div className="creator">
                 <div className="image-container"><img src={props.image} height="100%"></img></div>
                 <div>{props.username}</div>
                 <div>The purpose of lorem ipsum is to create a natural looking block of text and so on.graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to hav</div>
             </div>
             <div className="video-and-buttons">
-                <div className='black-background' onClick={playVideo} ref={props.reference1}>
+                <div className='black-background' onClick={playVideo}>
                     {props.renderButtons && <div className="buttons-small">
                         <span><i className="fa fa-heart"></i> {like}k</span>
                         <span onClick={() => {

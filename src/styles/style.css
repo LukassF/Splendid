@@ -426,7 +426,7 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media only screen and (max-width: 650px) {
   .video-container {
-    left: -20px;
+    width: 100vw;
   }
 }
 @media only screen and (max-height: 700px) {
@@ -505,6 +505,7 @@ main .left-menu .left-content #footer #footer-text {
   .video-container .video-and-buttons .black-background {
     padding-top: 40px;
     place-content: flex-start;
+    width: 100%;
   }
 }
 .video-container .video-and-buttons .black-background:hover .buttons {
@@ -736,20 +737,27 @@ main .left-menu .left-content #footer #footer-text {
   left: 50%;
   transform: translateX(-50%);
   height: 95%;
-  width: 95%;
+  width: 100%;
   border: solid black 2px;
   border-bottom: none;
   background-color: white;
   z-index: 20;
   bottom: -50px;
   right: 0;
-  border-top-right-radius: 30px 30px;
-  border-top-left-radius: 30px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
+}
+@media only screen and (max-width: 650px) {
+  #comment-section {
+    width: 110vw;
+    transform: translateX(-50%) scale(1.1);
+    background-color: rgb(14, 13, 13);
+    color: white;
+    border-color: transparent;
+  }
 }
 #comment-section .comment-section-header {
   width: 100%;
@@ -900,14 +908,6 @@ main .left-menu .left-content #footer #footer-text {
   transition: all 0.3s;
 }
 
-@media only screen and (max-width: 650px) {
-  #comment-section {
-    transform: translateX(-52%) scale(1.1);
-    background-color: black;
-    color: white;
-    border-color: white;
-  }
-}
 @keyframes slide {
   from {
     background-position: 0;
@@ -1471,6 +1471,12 @@ main .left-menu .left-content #footer #footer-text {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 650px) {
+  #profile-page-main article.article-1 {
+    background-color: rgb(0, 0, 0);
+    color: rgb(224, 223, 223);
+  }
+}
 #profile-page-main article.article-1 #profile-image {
   cursor: pointer;
   position: absolute;
@@ -1634,6 +1640,11 @@ main .left-menu .left-content #footer #footer-text {
   color: white;
   font-size: 1.2em;
   text-decoration: none;
+}
+@media only screen and (max-width: 650px) {
+  #profile-page-main article.article-1 a {
+    border-width: 2px;
+  }
 }
 #profile-page-main article.article-1 a:hover {
   background-color: rgb(7, 146, 128);
@@ -2178,14 +2189,9 @@ main .left-menu .left-content #footer #footer-text {
   align-self: center;
   left: 10px;
 }
-@media only screen and (max-width: 1050px) {
-  #profile-page-main article.article-2 .content-profile #my-videos .my-videos-container .video-container {
-    transform: translateX(5%);
-  }
-}
 @media only screen and (max-width: 650px) {
   #profile-page-main article.article-2 .content-profile #my-videos .my-videos-container .video-container {
-    transform: translateX(-7%) scale(0.8);
+    left: 0;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -2259,38 +2265,51 @@ main .left-menu .left-content #footer #footer-text {
   }
 }
 #video-creator-section {
-  height: 100vh;
-  width: 100%;
+  height: 100%;
+  min-width: 90%;
   display: grid;
+  padding-bottom: 20px;
   grid-template-columns: 2fr 3fr;
   grid-column-gap: 0px;
   z-index: 0;
+}
+@media screen and (max-width: 650px) {
+  #video-creator-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 500px) {
+  #video-creator-section {
+    transform: scale(0.8);
+  }
 }
 #video-creator-section #close-upload {
   width: 40px;
   aspect-ratio: 1/1;
   position: absolute;
   top: 50px;
-  right: 8%;
+  right: 7%;
   font-size: 1.7em;
   background: transparent;
   border: none;
   cursor: pointer;
   color: grey;
+  z-index: 10;
 }
 #video-creator-section #close-upload:hover {
-  color: black;
+  color: rgb(185, 181, 181);
 }
 @media only screen and (max-width: 650px) {
   #video-creator-section #close-upload {
     color: black;
   }
   #video-creator-section #close-upload:hover {
-    color: rgb(99, 96, 96);
+    color: rgb(179, 170, 170);
   }
 }
 #video-creator-section #creator {
-  width: 80%;
+  width: 100%;
   height: 90%;
   background-color: rgba(5, 77, 71, 0.6);
   border-radius: 20px 0px 0px 20px;
@@ -2309,6 +2328,10 @@ main .left-menu .left-content #footer #footer-text {
 @media only screen and (max-width: 650px) {
   #video-creator-section #creator {
     box-shadow: none;
+    height: 50%;
+    height: auto;
+    border-radius: 20px 20px 0px 0px;
+    border-color: rgb(129, 129, 129);
   }
 }
 #video-creator-section #creator textarea {
@@ -2322,7 +2345,30 @@ main .left-menu .left-content #footer #footer-text {
   border-radius: 19px 0px 0px 0px;
   top: -5px;
 }
-#video-creator-section #creator span {
+@media screen and (max-width: 650px) {
+  #video-creator-section #creator textarea {
+    top: 0px;
+    border-radius: 19px 19px 0px 0px;
+    background-color: rgb(54, 53, 53);
+    color: white;
+  }
+}
+#video-creator-section #creator #video-options-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+@media only screen and (max-width: 650px) {
+  #video-creator-section #creator #video-options-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+#video-creator-section #creator #video-options-buttons span {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -2334,41 +2380,40 @@ main .left-menu .left-content #footer #footer-text {
   gap: 20px;
   cursor: pointer;
 }
-#video-creator-section #creator span p {
+@media only screen and (max-width: 650px) {
+  #video-creator-section #creator #video-options-buttons span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.8);
+  }
+}
+#video-creator-section #creator #video-options-buttons span p {
   font-size: 1.3em;
 }
-#video-creator-section #creator span i {
+#video-creator-section #creator #video-options-buttons span i {
   margin-left: auto;
   margin-right: 20px;
   font-size: 1.2em;
 }
-#video-creator-section #creator span:hover {
+@media only screen and (max-width: 650px) {
+  #video-creator-section #creator #video-options-buttons span i {
+    margin: 0;
+  }
+}
+#video-creator-section #creator #video-options-buttons span:hover {
   background-color: rgba(211, 211, 224, 0.3);
 }
-#video-creator-section #creator span.toggled button {
+#video-creator-section #creator #video-options-buttons span.toggled button {
   background-color: rgba(43, 213, 255, 0.7);
   box-shadow: 2px 2px 7px rgb(78, 78, 78);
 }
-#video-creator-section #creator span.toggled button::before {
+#video-creator-section #creator #video-options-buttons span.toggled button::before {
   background-color: white;
   transform: translateX(50px);
 }
-@media only screen and (max-width: 600px) {
-  #video-creator-section #creator span.toggled button::before {
-    transform: translateX(35px);
-  }
-}
-@media only screen and (max-width: 550px) {
-  #video-creator-section #creator span.toggled button::before {
-    transform: translateX(25px);
-  }
-}
-@media only screen and (max-width: 500px) {
-  #video-creator-section #creator span.toggled button::before {
-    transform: translateX(15px);
-  }
-}
-#video-creator-section #creator span button {
+#video-creator-section #creator #video-options-buttons span button {
   cursor: pointer;
   transition: all 0.3s;
   width: 90px;
@@ -2378,7 +2423,7 @@ main .left-menu .left-content #footer #footer-text {
   background-color: rgba(110, 106, 106, 0.6);
   position: relative;
 }
-#video-creator-section #creator span button::before {
+#video-creator-section #creator #video-options-buttons span button::before {
   transition: background-color 0.1s, transform 0.3s;
   content: "";
   position: absolute;
@@ -2402,6 +2447,11 @@ main .left-menu .left-content #footer #footer-text {
   background: transparent;
   cursor: pointer;
 }
+@media only screen and (max-width: 650px) {
+  #video-creator-section #creator button#finish-upload {
+    margin-top: -10px;
+  }
+}
 #video-creator-section #creator button#finish-upload:hover {
   background-color: rgb(255, 255, 255);
   color: black;
@@ -2414,7 +2464,7 @@ main .left-menu .left-content #footer #footer-text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 90%;
   background-color: rgba(185, 192, 192, 0.5);
   align-self: center;
@@ -2426,6 +2476,11 @@ main .left-menu .left-content #footer #footer-text {
 @media only screen and (max-width: 650px) {
   #video-creator-section #live-view {
     background-color: rgba(66, 66, 66, 0.5);
+    border-radius: 0px 0px 20px 20px;
+    border: solid white 4px;
+    border-color: rgb(129, 129, 129);
+    border-top: none;
+    margin-top: -90px;
   }
 }
 #video-creator-section #live-view .caption {

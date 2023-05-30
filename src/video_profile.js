@@ -88,12 +88,14 @@ export default function VideoProfile(props){
             <button onClick={() => props.upload(false)} id="close-upload"><i className="fa fa-close"></i></button>
             <div id="creator">
                 <textarea placeholder="Enter caption" onChange={e => setCaption(e.target.value)}/>
-                <span onClick={(e) => {toggleButton(e) 
-                                        setAllow(!allow)
-                                        }} className="allow"><button></button><p className="paragraph">Disallow comments</p><i className="fa fa-message"></i></span>
-                <span onClick={toggleButton} className="allow"><button></button><p className="paragraph">Allow shares</p><i className="fa fa-share"></i></span>
-                <span onClick={toggleButton} className="allow"><button></button><p className="paragraph">Allow stitches</p><i className="fa fa-adjust"></i></span>
-                <span onClick={toggleButton} className="allow"><button></button><p className="paragraph">Allow downloads</p><i className="fa fa-download"></i></span>
+                <div id="video-options-buttons">
+                    <span onClick={(e) => {toggleButton(e) 
+                                            setAllow(!allow)
+                                            }} className="allow"><button></button><p className="paragraph">Disallow comments</p><i className="fa fa-message"></i></span>
+                    <span onClick={toggleButton} className="allow"><button></button><p className="paragraph">Allow shares</p><i className="fa fa-share"></i></span>
+                    <span onClick={toggleButton} className="allow"><button></button><p className="paragraph">Allow stitches</p><i className="fa fa-adjust"></i></span>
+                    <span onClick={toggleButton} className="allow"><button></button><p className="paragraph">Allow downloads</p><i className="fa fa-download"></i></span>
+                </div>
                 <button id="finish-upload" onClick={() => uploadVideo()}>Upload</button>
             </div>
             <div id="live-view">
