@@ -19,6 +19,10 @@
         grid-template-columns: 1fr;
         grid-template-rows: 3fr 2fr;
         transform: scale(0.9);
+        border: solid rgb(160, 158, 158) 4px;
+        border-radius: 10px;
+        padding: 0px;
+        background-color: rgba(5, 77, 71,0.6);
         // width:90vw;
     }
     // @media screen and (max-width:500px) {
@@ -45,6 +49,8 @@
 
         @media only screen and (max-width:650px){
             color:black;
+            top:5px;
+            right:15px;
             &:hover{
                 color:rgb(179, 170, 170);
             }
@@ -66,10 +72,11 @@
         box-shadow: 20px 0px 10px -5px rgb(156, 153, 153);
 
         @media screen and (max-width:650px) {
+            margin-top: -60px;
             justify-self: center;
             border-radius: 10px;
             box-shadow: none;
-            border-color: rgb(151, 149, 149);
+            border: none;
             min-height: 90%;
             // position: absolute;
         }
@@ -85,7 +92,7 @@
             border-radius: 19px 0px 0px 0px;
             top:-5px;
             @media screen and (max-width:650px) {
-                border-radius: 0px;
+                border-radius: 10px 10px 0px 0px;
                 top:-2px;
                 height: 250px;
                 background-color: rgb(151, 149, 149);
@@ -208,7 +215,7 @@
             border-left: solid white 4px;
             border:none;
             background-color: transparent;
-            margin-top: -100px;
+            margin-top: -50px;
         }
         .black-background-profile{
                 overflow: hidden;
