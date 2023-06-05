@@ -7,7 +7,8 @@
 
 #video-creator-section{
     height:100%;
-    min-width: 90%;
+    width: 90%;
+    // background-color: red;
     display:grid;
     padding-bottom: 20px;
     grid-template-columns: 2fr 3fr;
@@ -16,13 +17,14 @@
 
     @media screen and (max-width:650px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 3fr 2fr;
+        transform: scale(0.9);
         // width:90vw;
     }
-    @media screen and (max-width:500px) {
-        transform: scale(0.8);
-        // width:90vw;
-    }
+    // @media screen and (max-width:500px) {
+    //     transform: scale(0.8);
+    //     // width:90vw;
+    // }
 
     #close-upload{
         width:40px;
@@ -62,12 +64,14 @@
         position: relative;
         padding: 0px 0px 20px 0px;
         box-shadow: 20px 0px 10px -5px rgb(156, 153, 153);
-        @media only screen and (max-width:650px){
-           box-shadow: none;
-           height:50%;
-           height: auto;
-           border-radius: 20px 20px 0px 0px;
-           border-color: rgb(129, 129, 129);
+
+        @media screen and (max-width:650px) {
+            justify-self: center;
+            border-radius: 10px;
+            box-shadow: none;
+            border-color: rgb(151, 149, 149);
+            min-height: 90%;
+            // position: absolute;
         }
 
         textarea{
@@ -81,18 +85,15 @@
             border-radius: 19px 0px 0px 0px;
             top:-5px;
             @media screen and (max-width:650px) {
-                top:0px;
-                border-radius: 19px 19px 0px 0px;
-                background-color: rgb(54, 53, 53);
-                color:white;
+                border-radius: 0px;
+                top:-2px;
+                height: 250px;
+                background-color: rgb(151, 149, 149);
             }
         }
         #video-options-buttons{
             @include flex(column,flex-start,flex-start);
             width:100%;
-            @media only screen and (max-width:650px){
-                @include flex(row,flex-start,flex-start);
-             }
             span{
                 @include flex(row,center,flex-start);
                 width:100%;
@@ -102,20 +103,29 @@
                 gap:20px;
                 cursor: pointer;
                 @media only screen and (max-width:650px){
-                    @include flex(column,center,center);
-                    transform: scale(0.8);
-                 }
+                    font-size: 0.8em;
+
+                    button{
+                        transform: scale(0.8);
+                    }
+                }
     
                 p{
                     font-size: 1.3em;
+                    @media only screen and (max-width:1100px){
+                        display:none;
+                    }
+                    @media only screen and (max-width:650px){
+                        display:block;
+                    }
+                    @media only screen and (max-width:370px){
+                        display:none;
+                    }
                 }
                 i{
                     margin-left: auto;
                     margin-right: 20px;
                     font-size: 1.2em;
-                    @media only screen and (max-width:650px){
-                       margin:0 ;
-                     }
                 }
     
                 &:hover{
@@ -129,15 +139,6 @@
                     background-color: white;
                     transform: translateX(50px);
                     
-                    // @media only screen and (max-width:600px){
-                    //     transform: translateX(35px);
-                    //  }
-                    //  @media only screen and (max-width:550px){
-                    //     transform: translateX(25px);
-                    //  }
-                    //  @media only screen and (max-width:500px){
-                    //     transform: translateX(15px);
-                    //  }
                 }
     
                 button{
@@ -177,9 +178,10 @@
             border: solid white 4px;
             background: transparent;
             cursor: pointer;
-            @media only screen and (max-width:650px){
-                margin-top:-10px ;
-              }
+
+            @media screen and (max-width:650px){
+                margin-top: 20px;
+            }
 
             &:hover{
                 background-color: rgb(255, 255, 255);
@@ -200,32 +202,21 @@
         border-radius: 0px 20px 20px 0px;
         border: solid white 4px;
         border-left:none;
-        @media only screen and (max-width:650px){
-            background-color: rgba(66, 66, 66, 0.5);
-            border-radius: 0px 0px 20px 20px;
-            border: solid white 4px;
-            border-color: rgb(129, 129, 129);
-            border-top: none;
-            margin-top: -90px;
-         }
 
-        .caption{
-            width:80%;
-            min-height: 50px;
-            max-height: 150px;
-            height:auto;
-            word-break: break-all;
-            font-size: 1.1em;
-            color:rgb(61, 61, 61);
+        @media screen and (max-width:650px) {
+            border-radius: 10px;
+            border-left: solid white 4px;
+            border:none;
+            background-color: transparent;
+            margin-top: -100px;
         }
-
         .black-background-profile{
                 overflow: hidden;
                 @include flex(column,center,center);
                 width:80%;
                 aspect-ratio: 1/1;
                 background-color: black;
-                border-radius: 20px;
+                border-radius: 10px;
                 position: relative;
 
             input{
@@ -240,6 +231,7 @@
                 border: none;
                 color:white;
                 background-color: rgb(5, 77, 71);
+                
     
                 &:hover{
                     background-color: rgb(7, 105, 81);
@@ -251,16 +243,6 @@
 }
 
 @media only screen and (max-width:1100px){
-    .allow{
-        margin-bottom: 20px;
-        p{
-            display: none;
-        }
-        i{
-            margin:0px;
-        }
-    }
-
     .black-background-profile{
         transform: scale(1.2);
     }

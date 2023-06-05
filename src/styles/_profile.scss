@@ -209,7 +209,8 @@
             text-decoration: none;
 
             @media only screen and (max-width:650px){
-                border-width: 2px;
+                border-width: 0;
+                transform: scale(0.8);
             }
 
             &:hover{
@@ -497,6 +498,8 @@
                 'button button'
                 'hints hints'
                 ;
+                box-shadow: none;
+                padding: 10px;
                 }
                 @media only screen and (max-width:650px){
             

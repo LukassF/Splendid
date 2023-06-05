@@ -261,6 +261,10 @@ section#following{
                     @include flex(row,center,flex-start);
                     gap:10px;
                     color:rgb(116, 113, 113);
+
+                    @media only screen and (max-width: 650px){
+                        color: rgb(223, 218, 218);
+                     }
                 }
 
                 span{
@@ -315,6 +319,9 @@ section#following{
                 div{
 
                     @include flex(column,center,center);
+                }
+                @media only screen and (max-width: 650px){
+                   background-color: rgb(170, 167, 167);
                 }
             }
         }

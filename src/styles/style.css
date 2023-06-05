@@ -1643,7 +1643,8 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media only screen and (max-width: 650px) {
   #profile-page-main article.article-1 a {
-    border-width: 2px;
+    border-width: 0;
+    transform: scale(0.8);
   }
 }
 #profile-page-main article.article-1 a:hover {
@@ -1923,6 +1924,8 @@ main .left-menu .left-content #footer #footer-text {
   #profile-page-main article.article-2 .content-profile #upload-button-profile {
     grid-template-rows: 2fr 6fr;
     grid-template-areas: "button button" "hints hints";
+    box-shadow: none;
+    padding: 10px;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -2266,7 +2269,7 @@ main .left-menu .left-content #footer #footer-text {
 }
 #video-creator-section {
   height: 100%;
-  min-width: 90%;
+  width: 90%;
   display: grid;
   padding-bottom: 20px;
   grid-template-columns: 2fr 3fr;
@@ -2276,12 +2279,8 @@ main .left-menu .left-content #footer #footer-text {
 @media screen and (max-width: 650px) {
   #video-creator-section {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-}
-@media screen and (max-width: 500px) {
-  #video-creator-section {
-    transform: scale(0.8);
+    grid-template-rows: 3fr 2fr;
+    transform: scale(0.9);
   }
 }
 #video-creator-section #close-upload {
@@ -2325,13 +2324,13 @@ main .left-menu .left-content #footer #footer-text {
   padding: 0px 0px 20px 0px;
   box-shadow: 20px 0px 10px -5px rgb(156, 153, 153);
 }
-@media only screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   #video-creator-section #creator {
+    justify-self: center;
+    border-radius: 10px;
     box-shadow: none;
-    height: 50%;
-    height: auto;
-    border-radius: 20px 20px 0px 0px;
-    border-color: rgb(129, 129, 129);
+    border-color: rgb(151, 149, 149);
+    min-height: 90%;
   }
 }
 #video-creator-section #creator textarea {
@@ -2347,10 +2346,10 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media screen and (max-width: 650px) {
   #video-creator-section #creator textarea {
-    top: 0px;
-    border-radius: 19px 19px 0px 0px;
-    background-color: rgb(54, 53, 53);
-    color: white;
+    border-radius: 0px;
+    top: -2px;
+    height: 250px;
+    background-color: rgb(151, 149, 149);
   }
 }
 #video-creator-section #creator #video-options-buttons {
@@ -2359,14 +2358,6 @@ main .left-menu .left-content #footer #footer-text {
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-}
-@media only screen and (max-width: 650px) {
-  #video-creator-section #creator #video-options-buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
 }
 #video-creator-section #creator #video-options-buttons span {
   display: flex;
@@ -2382,25 +2373,34 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media only screen and (max-width: 650px) {
   #video-creator-section #creator #video-options-buttons span {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 0.8em;
+  }
+  #video-creator-section #creator #video-options-buttons span button {
     transform: scale(0.8);
   }
 }
 #video-creator-section #creator #video-options-buttons span p {
   font-size: 1.3em;
 }
+@media only screen and (max-width: 1100px) {
+  #video-creator-section #creator #video-options-buttons span p {
+    display: none;
+  }
+}
+@media only screen and (max-width: 650px) {
+  #video-creator-section #creator #video-options-buttons span p {
+    display: block;
+  }
+}
+@media only screen and (max-width: 370px) {
+  #video-creator-section #creator #video-options-buttons span p {
+    display: none;
+  }
+}
 #video-creator-section #creator #video-options-buttons span i {
   margin-left: auto;
   margin-right: 20px;
   font-size: 1.2em;
-}
-@media only screen and (max-width: 650px) {
-  #video-creator-section #creator #video-options-buttons span i {
-    margin: 0;
-  }
 }
 #video-creator-section #creator #video-options-buttons span:hover {
   background-color: rgba(211, 211, 224, 0.3);
@@ -2447,9 +2447,9 @@ main .left-menu .left-content #footer #footer-text {
   background: transparent;
   cursor: pointer;
 }
-@media only screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   #video-creator-section #creator button#finish-upload {
-    margin-top: -10px;
+    margin-top: 20px;
   }
 }
 #video-creator-section #creator button#finish-upload:hover {
@@ -2473,24 +2473,14 @@ main .left-menu .left-content #footer #footer-text {
   border: solid white 4px;
   border-left: none;
 }
-@media only screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
   #video-creator-section #live-view {
-    background-color: rgba(66, 66, 66, 0.5);
-    border-radius: 0px 0px 20px 20px;
-    border: solid white 4px;
-    border-color: rgb(129, 129, 129);
-    border-top: none;
-    margin-top: -90px;
+    border-radius: 10px;
+    border-left: solid white 4px;
+    border: none;
+    background-color: transparent;
+    margin-top: -100px;
   }
-}
-#video-creator-section #live-view .caption {
-  width: 80%;
-  min-height: 50px;
-  max-height: 150px;
-  height: auto;
-  word-break: break-all;
-  font-size: 1.1em;
-  color: rgb(61, 61, 61);
 }
 #video-creator-section #live-view .black-background-profile {
   overflow: hidden;
@@ -2501,7 +2491,7 @@ main .left-menu .left-content #footer #footer-text {
   width: 80%;
   aspect-ratio: 1/1;
   background-color: black;
-  border-radius: 20px;
+  border-radius: 10px;
   position: relative;
 }
 #video-creator-section #live-view .black-background-profile input {
@@ -2522,15 +2512,6 @@ main .left-menu .left-content #footer #footer-text {
 }
 
 @media only screen and (max-width: 1100px) {
-  .allow {
-    margin-bottom: 20px;
-  }
-  .allow p {
-    display: none;
-  }
-  .allow i {
-    margin: 0px;
-  }
   .black-background-profile {
     transform: scale(1.2);
   }
@@ -2821,6 +2802,11 @@ section#following .follower-card .follower-card-content .back ul li {
   gap: 10px;
   color: rgb(116, 113, 113);
 }
+@media only screen and (max-width: 650px) {
+  section#following .follower-card .follower-card-content .back ul li {
+    color: rgb(223, 218, 218);
+  }
+}
 section#following .follower-card .follower-card-content .back ul span {
   margin-top: 20px;
   width: 100%;
@@ -2876,6 +2862,11 @@ section#following .follower-card .follower-card-content .back .follower-stats di
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media only screen and (max-width: 650px) {
+  section#following .follower-card .follower-card-content .back .follower-stats {
+    background-color: rgb(170, 167, 167);
+  }
 }
 section#following #no-followers {
   position: relative;
@@ -3006,7 +2997,6 @@ hr {
   z-index: 10;
   border-bottom: solid rgb(41, 40, 40) 1px;
   padding: 15px 20px;
-  text-shadow: 0 0 7px #fff, 0 0 10px #05ffde, 0 0 21px rgb(0, 238, 255), 0 0 42px rgb(4, 128, 201);
 }
 @media only screen and (max-width: 650px) {
   #logo-absolute {
