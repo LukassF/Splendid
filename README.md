@@ -22,5 +22,5 @@ The project is created with:
 ![Splendid_pc](https://github.com/LukassF/splendid-app/assets/132075104/57b3079f-f078-4902-815b-3afc198df0a2)
 
 ## Additional info
-Splendid is my first large project and thus the scarcity of commits, since my journey with git and github has bagun shortly after completing this project.
+Splendid is my first large project and thus the scarcity of commits, since my journey with git and github has only begun shortly after completing this project.
 Also the code organisation, altough unimpressive in this particular project, may serve as a base for comparison to my latest projects, and hence visualize my self improvements later on.
