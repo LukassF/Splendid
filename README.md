@@ -1,4 +1,4 @@
-# Splendid
+# Splendid (https://splendid-app.vercel.app/)
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
