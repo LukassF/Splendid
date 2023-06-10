@@ -77,6 +77,7 @@
             color:rgb(85, 85, 85);
             @media only screen and (max-width:500px){
                 padding-left: 30px;
+                font-size: 0.7em;
             }
           
         }
@@ -85,7 +86,8 @@
             position: relative;
             text-align: left;
             @media only screen and (max-width:500px){
-                padding-left: 30px;
+                padding-left: 15px;
+                transform: scale(0.8);
             }
             
         
@@ -211,6 +213,8 @@
             @media only screen and (max-width:650px){
                 border-width: 0;
                 transform: scale(0.8);
+                top:0px;
+                right:80px;
             }
 
             &:hover{

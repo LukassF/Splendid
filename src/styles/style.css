@@ -522,8 +522,14 @@ main .left-menu .left-content #footer #footer-text {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 70px;
+  padding: 0px 50px;
   visibility: hidden;
+}
+@media screen and (max-width: 400px) {
+  .video-container .video-and-buttons .black-background .buttons-small {
+    padding: 0px 40px;
+    bottom: 10%;
+  }
 }
 .video-container .video-and-buttons .black-background .buttons-small span {
   cursor: pointer;
@@ -929,7 +935,7 @@ main .left-menu .left-content #footer #footer-text {
   overflow-y: auto;
 }
 #login-page-main section {
-  border: solid white 5px;
+  border: solid white 2px;
   width: 95%;
   min-height: 95%;
   height: auto;
@@ -965,6 +971,11 @@ main .left-menu .left-content #footer #footer-text {
 @media only screen and (max-width: 920px) {
   #login-page-main section {
     grid-template-columns: 1fr 0fr;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    border: none;
+    border-radius: 0px;
   }
 }
 #login-page-main section #nav {
@@ -996,8 +1007,18 @@ main .left-menu .left-content #footer #footer-text {
   align-items: center;
   gap: 15px;
 }
+@media screen and (max-width: 650px) {
+  #login-page-main section #nav a i {
+    padding-left: 2px;
+  }
+}
 #login-page-main section #nav a i span {
   font-size: 0.7em;
+}
+@media screen and (max-width: 550px) {
+  #login-page-main section #nav a i span {
+    display: none;
+  }
 }
 #login-page-main section #nav button {
   text-align: end;
@@ -1019,7 +1040,7 @@ main .left-menu .left-content #footer #footer-text {
   background-color: white;
   border: none;
   width: 100%;
-  height: 60px;
+  min-height: 60px;
   outline: none;
   padding: 0px 15px;
   font-size: 1.1em;
@@ -1094,7 +1115,7 @@ main .left-menu .left-content #footer #footer-text {
   border-radius: 20px;
   padding-top: 0px;
   position: relative;
-  width: 60%;
+  width: 80%;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -1262,7 +1283,7 @@ main .left-menu .left-content #footer #footer-text {
   border-radius: 20px;
   padding-top: 0px;
   position: relative;
-  width: 60%;
+  width: 80%;
   height: 90%;
   display: flex;
   flex-direction: column;
@@ -1501,6 +1522,7 @@ main .left-menu .left-content #footer #footer-text {
 @media only screen and (max-width: 500px) {
   #profile-page-main article.article-1 h3 {
     padding-left: 30px;
+    font-size: 0.7em;
   }
 }
 #profile-page-main article.article-1 .name {
@@ -1510,7 +1532,8 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media only screen and (max-width: 500px) {
   #profile-page-main article.article-1 .name {
-    padding-left: 30px;
+    padding-left: 15px;
+    transform: scale(0.8);
   }
 }
 #profile-page-main article.article-1 .name h1 {
@@ -1645,6 +1668,8 @@ main .left-menu .left-content #footer #footer-text {
   #profile-page-main article.article-1 a {
     border-width: 0;
     transform: scale(0.8);
+    top: 0px;
+    right: 80px;
   }
 }
 #profile-page-main article.article-1 a:hover {
@@ -2278,13 +2303,14 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media screen and (max-width: 650px) {
   #video-creator-section {
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 3fr 2fr;
     transform: scale(0.9);
-    border: solid rgb(160, 158, 158) 4px;
+    border-bottom: solid rgb(160, 158, 158) 4px;
     border-radius: 10px;
     padding: 0px;
-    background-color: rgba(5, 77, 71, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
   }
 }
 #video-creator-section #close-upload {

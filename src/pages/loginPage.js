@@ -43,12 +43,12 @@ export default function LoginPage({ setWelcome }) {
       }
     } else if (loginLeftRef.current && mainText === "Not registered yet?") {
       setSmall(false);
-      contentLoginRef1.current.style.width = "60%";
+      contentLoginRef1.current.style.width = "80%";
       loginLeftRef.current.style.zIndex = "1";
       loginRightRef.current.style.zIndex = "1";
     } else if (loginRightRef.current && mainText === "Already registered?") {
       setSmall(false);
-      contentLoginRef2.current.style.width = "60%";
+      contentLoginRef2.current.style.width = "80%";
       loginLeftRef.current.style.zIndex = "1";
       loginRightRef.current.style.zIndex = "1";
     } else setSmall(false);
