@@ -230,7 +230,10 @@ export default function LoginPage({ setWelcome }) {
                 <button
                   className="button1"
                   onClick={() => {
-                    if (loginPasswordText === "") {
+                    if (
+                      loginPasswordText === "" &&
+                      passwordRef1.current.value.length !== 0
+                    ) {
                       setWelcome(true);
                       window.localStorage.setItem("currentUsername", login);
                       setTimeout(() => {
