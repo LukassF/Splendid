@@ -35,11 +35,11 @@ export default function LoginPage({ setWelcome }) {
       if (loginLeftRef.current && mainText === "Not registered yet?") {
         loginLeftRef.current.style.zIndex = "2";
         loginRightRef.current.style.zIndex = "1";
-        contentLoginRef1.current.style.width = "80%";
+        contentLoginRef1.current.style.width = "100%";
       } else if (loginRightRef.current && mainText === "Already registered?") {
         loginRightRef.current.style.zIndex = "2";
         loginLeftRef.current.style.zIndex = "1";
-        contentLoginRef2.current.style.width = "80%";
+        contentLoginRef2.current.style.width = "100%";
       }
     } else if (loginLeftRef.current && mainText === "Not registered yet?") {
       setSmall(false);

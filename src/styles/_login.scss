@@ -128,6 +128,10 @@
             &:focus{
                 box-shadow: 6px 6px 20px rgba(78, 77, 77,0.6);
             }
+
+            @media screen and (max-width:920px) {
+                height:40px;
+            }
         }
         .username-container{
             width:100%;
