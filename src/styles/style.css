@@ -483,6 +483,7 @@ main .left-menu .left-content #footer #footer-text {
 .video-container .creator div:nth-child(3) {
   font-size: 15px;
   color: rgba(83, 82, 82, 0.6);
+  word-break: break-all;
 }
 .video-container .video-and-buttons {
   display: flex;
@@ -2674,28 +2675,6 @@ section#following .follower-card {
   perspective: 1000px;
   background-color: transparent;
 }
-section#following .follower-card:hover .follower-card-content, section#following .follower-card:focus .follower-card-content {
-  transform: rotateY(180deg);
-  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
-}
-section#following .follower-card:hover .front, section#following .follower-card:focus .front {
-  transition: opacity 0.3s;
-  opacity: 0;
-}
-section#following .follower-card:hover .back, section#following .follower-card:focus .back {
-  transition: opacity 0.3s;
-  transition-delay: 0.2s;
-  opacity: 1;
-}
-section#following .follower-card:not(:hover, :focus) .front {
-  transition: opacity 0.3s;
-  transition-delay: 0.2s;
-  opacity: 1;
-}
-section#following .follower-card:not(:hover, :focus) .back {
-  transition: opacity 0.3s;
-  opacity: 0;
-}
 section#following .follower-card .follower-card-content {
   overflow: hidden;
   border-radius: inherit;
@@ -2775,6 +2754,11 @@ section#following .follower-card .follower-card-content .back::after {
 @media only screen and (max-width: 650px) {
   section#following .follower-card .follower-card-content .back::after {
     background-color: white;
+  }
+}
+@media screen and (hover: none) {
+  section#following .follower-card .follower-card-content .back::after {
+    display: none;
   }
 }
 section#following .follower-card .follower-card-content .back .follower-background-image {
@@ -2888,6 +2872,37 @@ section#following .follower-card .follower-card-content .back .follower-stats di
 @media only screen and (max-width: 650px) {
   section#following .follower-card .follower-card-content .back .follower-stats {
     background-color: rgb(170, 167, 167);
+  }
+}
+section#following .follower-card:hover .follower-card-content, section#following .follower-card:focus .follower-card-content {
+  transform: rotateY(180deg);
+  box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+section#following .follower-card:hover .front, section#following .follower-card:focus .front {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+section#following .follower-card:hover .back, section#following .follower-card:focus .back {
+  transition: opacity 0.3s;
+  transition-delay: 0.2s;
+}
+@media all and (hover: none) {
+  section#following .follower-card:hover .back, section#following .follower-card:focus .back {
+    visibility: visible;
+  }
+}
+section#following .follower-card:not(:hover, :focus) .front {
+  transition: opacity 0.3s;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+section#following .follower-card:not(:hover, :focus) .back {
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+@media all and (hover: none) {
+  section#following .follower-card:not(:hover, :focus) .back {
+    visibility: hidden;
   }
 }
 section#following #no-followers {
