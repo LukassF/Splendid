@@ -956,24 +956,13 @@ main .left-menu .left-content #footer #footer-text {
   grid-row-gap: 0px;
   grid-template-areas: "backwards backwards" "left right";
 }
-@media only screen and (max-height: 665px) {
-  #login-page-main section {
-    top: 50%;
-    transform: scale(0.8) translate(-65%, -65%);
-  }
-}
-@media only screen and (max-height: 565px) {
-  #login-page-main section {
-    top: -70px;
-    transform: scale(0.8) translate(-65%, 0%);
-  }
-}
 @media only screen and (max-width: 920px) {
   #login-page-main section {
     grid-template-columns: 1fr 0fr;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     top: 50%;
+    transform: translate(-50%, -50%);
     border: none;
     border-radius: 0px;
   }
