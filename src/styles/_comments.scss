@@ -51,6 +51,9 @@
         gap:50px;
         overflow-y: auto;
         overflow-x: hidden;
+        @media only screen and (max-width:650px){
+            padding-left: 10px;
+        }
         .individual-comment{
             width:70%;
             height:auto;
@@ -63,7 +66,7 @@
             'image comment heart'
             ;
             @media only screen and (max-width:650px){
-                grid-column-gap: 30px;
+                grid-column-gap: 40px;
             }
             div:nth-child(1){
                 grid-area: image;
@@ -104,6 +107,7 @@
                 @media only screen and (max-width:750px){
                     transform: translateX(-130px);
                 }
+                
             }
 
         }

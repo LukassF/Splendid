@@ -39,6 +39,7 @@ export default function Comments(props) {
               <IndividualComment
                 commentQuantity={comment.id}
                 comment={comment.content}
+                key={comment.id}
               />
             );
           })}

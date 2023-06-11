@@ -792,6 +792,11 @@ main .left-menu .left-content #footer #footer-text {
   overflow-y: auto;
   overflow-x: hidden;
 }
+@media only screen and (max-width: 650px) {
+  #comment-section .comment-section-content {
+    padding-left: 10px;
+  }
+}
 #comment-section .comment-section-content .individual-comment {
   width: 70%;
   height: auto;
@@ -803,7 +808,7 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media only screen and (max-width: 650px) {
   #comment-section .comment-section-content .individual-comment {
-    grid-column-gap: 30px;
+    grid-column-gap: 40px;
   }
 }
 #comment-section .comment-section-content .individual-comment div:nth-child(1) {
@@ -1553,7 +1558,7 @@ main .left-menu .left-content #footer #footer-text {
 }
 @media only screen and (max-width: 500px) {
   #profile-page-main article.article-1 .name input {
-    left: 30px;
+    left: 15px;
   }
 }
 #profile-page-main article.article-1 ul {
